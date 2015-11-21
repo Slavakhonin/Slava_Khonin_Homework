@@ -1,3 +1,5 @@
+package Week1Homework;
+
 import java.util.Scanner;
 
 import static java.lang.Math.pow;
