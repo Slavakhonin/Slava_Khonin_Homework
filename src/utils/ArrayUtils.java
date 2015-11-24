@@ -57,6 +57,45 @@ public class ArrayUtils {
 
         return array;
     }
+
+    public static int findMinimunInArray(int[] array) {
+        int min = array[0];
+
+        for (int i = 0; i <array.length ; i++) {
+            if (min > array[i])
+            {
+                min = array[i];
+            }
+
+        }
+
+        return min;
+    }
+
+    public static int findMaximumInArray(int[] array) {
+        int max = array[0];
+
+        for (int i = 0; i <array.length ; i++) {
+            if (max < array[i])
+            {
+                max = array[i];
+            }
+
+        }
+
+        return max;
+    }
+
+    public static int indexOfArray (int[] array, int number){
+        int index = -1;
+
+        for (int i = 0; i < array.length ; i++) {
+            if (array[i] == number){
+                index = i;
+                break;
+            }
+        }
+        return index;
+    }
 }
 
-}

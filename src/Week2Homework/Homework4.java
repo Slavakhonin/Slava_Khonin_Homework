@@ -8,7 +8,17 @@ import java.util.Scanner;
 public class Homework4 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int[] userArray = sc.nex;
 
+        System.out.print("Please initialize the size of array: ");
+        int sizeOfArray = sc.nextInt();
+        int[] userArray = new int[sizeOfArray];
+
+        for (int i = 0; i <sizeOfArray ; i++) {
+            System.out.printf("Please enter the %d element of array: ", i);
+
+            userArray[i] = sc.nextInt();
+        }
+
+        System.out.println("There is " + userArray.length + " numbers in array");
     }
 }
