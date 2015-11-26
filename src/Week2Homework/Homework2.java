@@ -5,6 +5,8 @@ import static utils.ArrayUtils.*;
 
 /**
  * Created by vkhonin on 11/24/2015.
+ * 2) Поменять местами наибольший
+ и наименьший элементы в массиве
  */
 public class Homework2 {
     public static void main(String[] args) {

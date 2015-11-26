@@ -6,6 +6,7 @@ import static utils.ArrayUtils.findMinimunInArray;
 
 /**
  * Created by vkhonin on 11/24/2015.
+ * 1) Найти минимальное и максимальное значения в массиве и вывести их на консоль
  */
 public class Homework1 {
     public static void main(String[] args) {

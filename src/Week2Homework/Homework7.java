@@ -2,7 +2,6 @@ package Week2Homework;
 
 import static utils.ArrayUtils.createRandomArray;
 import static utils.ArrayUtils.showArray;
-import static utils.ArrayUtils.sumAllArrayElements;
 
 /**
  * Created by vkhonin on 11/25/2015.
@@ -10,15 +9,36 @@ import static utils.ArrayUtils.sumAllArrayElements;
  */
 public class Homework7 {
     public static void main(String[] args) {
-        int[] array1 = createRandomArray(10,100);
-        int[] array2 = createRandomArray(10,100);
+        int[] array = createRandomArray(10,100);
 
-        for (int i = 0; i <array1.length ; i++) {
-            array1[i] += array2[2];
+        int halfway = array.length/2;
+        int middleArifmetic1 = 0;
+        int middleArifmetic2 = 0;
+
+        showArray(array);
+
+        for (int i = 0; i < array.length ; i++) {
+
+            if (i < halfway){
+                middleArifmetic1 += array[i];
+            }else{
+                middleArifmetic2 += array[i];
             }
+        }
+        middleArifmetic1 = middleArifmetic1/halfway;
+        middleArifmetic2 = middleArifmetic2/halfway;
 
-        showArray(array1);
+        if (middleArifmetic1 > middleArifmetic2){
+            for (int i = 0; i < halfway ; i++) {
+                System.out.print(array[i] + " ");
+            }
+            }else{
+                for (int i = halfway; i <array.length ; i++) {
+                    System.out.print(array[i] + " ");
+                }
+        }
 
 
     }
+
 }

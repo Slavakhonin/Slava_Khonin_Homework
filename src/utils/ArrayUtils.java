@@ -44,6 +44,12 @@ public class ArrayUtils {
         return (int)(Math.random() * range);
     }
 
+    public static int GenerateRandomDigit(int range){
+        return getGenerateRandomDigit(range);
+    }
+
+
+
     public static int[] sortArray(int[] array){
         for (int j = array.length; j >=0; j--) {
             for (int i = 0; i < j - 1; i++) {
@@ -97,5 +103,24 @@ public class ArrayUtils {
         }
         return index;
     }
+
+    public static double findArrayAverage(int[] array){
+        double average = 0;
+
+        for (int i = 0; i < array.length; i++) {
+            average += array[i];
+            }
+        return average/array.length;
+    }
+
+    public static int sumAllArrayElements(int[] array){
+        int sum = 0;
+        for (int i = 0; i <array.length ; i++) {
+            sum += array[i];
+
+        }
+        return sum;
+
+        }
 }
 

@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 /**
  * Created by vkhonin on 11/24/2015.
+ * 4) Посчитать сколько цифр(цифра задается пользователем) в массиве
  */
 public class Homework4 {
     public static void main(String[] args) {

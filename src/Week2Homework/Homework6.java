@@ -5,6 +5,7 @@ import static utils.ArrayUtils.findArrayAverage;
 
 /**
  * Created by vkhonin on 11/25/2015.
+ * 6) Найти среднее арифметическое массива
  */
 public class Homework6 {
     public static void main(String[] args) {
