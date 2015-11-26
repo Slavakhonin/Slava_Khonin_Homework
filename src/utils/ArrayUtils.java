@@ -122,5 +122,27 @@ public class ArrayUtils {
         return sum;
 
         }
+
+    public static void splitArray(int[] arr, int start, int end) { // обрезать массив по границам start и end
+
+        int sizeOfArray = arr.length;
+        sizeOfArray = sizeOfArray - ((sizeOfArray - end) + start);
+        int[] splittedArray = new int[sizeOfArray];
+
+        int j = 0;
+
+        for (int i = start; i < end; i++) {
+
+            splittedArray[j] = arr[i];
+            j++;
+
+        }
+
+        showArray(splittedArray);
+
+
+
+    }
+
 }
 
