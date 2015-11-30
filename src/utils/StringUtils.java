@@ -58,4 +58,31 @@ public class StringUtils {
         return words;
     }
 
+    public static String[] wordsToUpperCase(String[] words){
+        for (int i = 0; i < words.length; i++) {
+            words[i] = toUpperCase(words[i]);
+        }
+        return words;
+    }
+
+    private static String toUpperCase(String word){
+        char [] letters = word.toCharArray();
+        letters[0] = Character.toUpperCase(letters[0]);
+
+        word = "";
+
+        charArrayToString(letters);
+        return word;
+    }
+
+    public static String charArrayToString (char[] letters){
+
+        String word = "";
+
+        for (int i = 0; i < letters.length; i++) {
+            word += letters[i];
+        }
+        return word;
+    }
+
 }
