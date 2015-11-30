@@ -17,12 +17,15 @@ public class Homework_Lottery {
         int[] userNumbers = new int[6];
         userNumbersInArray(userNumbers);
 
+
         int[] lotteryNumbers = new int[6];
         uniqueArray(lotteryNumbers);
 
-        System.out.print("You have define numbers: ");showArray(userNumbers);
-        System.out.print("Numbers in lottery: ");showArray(lotteryNumbers);
-        System.out.printf("You have %d winning numbers.",winningNumbers(userNumbers,lotteryNumbers));
+        System.out.print("You have define numbers: ");
+        showArray(userNumbers);
+        System.out.print("Numbers in lottery: ");
+        showArray(lotteryNumbers);
+        System.out.printf("You have %d winning numbers.", winningNumbers(userNumbers, lotteryNumbers));
     }
 
     public static int generateRandomNumber1To42() {
@@ -39,11 +42,11 @@ public class Homework_Lottery {
                 System.out.printf("Please enter the %d number in ticket: ", i + 1);
                 userArray[i] = sc.nextInt();
                 if (userArray[i] > 0 && userArray[i] < 43) {
-                    if(indexOfArray(lotteryArray,userArray[i]) < 0){
+                    if (indexOfArray(lotteryArray, userArray[i]) < 0) {
                         break;
-                    }else{
+                    } else {
                         System.out.println("You have entered a duplicate number, please note that all numbers must be unique.");
-                       }
+                    }
                 } else {
                     System.out.println("You must choose only numbers between 1 and 42");
                 }
@@ -57,13 +60,13 @@ public class Homework_Lottery {
     public static int[] lotteryNumbersInArray(int[] lotteryArray) {
         for (int i = 0; i < 6; i++) {
             lotteryArray[i] = generateRandomNumber1To42();
-            }
+        }
 
         sortArray(lotteryArray);
         return lotteryArray;
     }
 
-    public static int[] uniqueArray(int[] array){
+    public static int[] uniqueArray(int[] array) {
 
         while (true) {
 
@@ -82,13 +85,12 @@ public class Homework_Lottery {
         return array;
     }
 
-    public static int winningNumbers(int[] userArray, int[] lotteryArray)
-    {
+    public static int winningNumbers(int[] userArray, int[] lotteryArray) {
         int winningNumbers = 0;
 
         for (int j = 0; j < 6; j++) {
             for (int i = 0; i < 6; i++) {
-                if(userArray[j] == lotteryArray[i]){
+                if (userArray[j] == lotteryArray[i]) {
                     winningNumbers++;
                 }
             }

@@ -15,7 +15,7 @@ public class Homework8 {
 
         for (int i = 0; i <array1.length ; i++) {
             array1[i] += array2[2];
-            }
+        }
 
         showArray(array1);
 

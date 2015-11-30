@@ -9,33 +9,33 @@ import static utils.ArrayUtils.showArray;
  */
 public class Homework7 {
     public static void main(String[] args) {
-        int[] array = createRandomArray(10,100);
+        int[] array = createRandomArray(10, 100);
 
-        int halfway = array.length/2;
+        int halfway = array.length / 2;
         int middleArifmetic1 = 0;
         int middleArifmetic2 = 0;
 
         showArray(array);
 
-        for (int i = 0; i < array.length ; i++) {
+        for (int i = 0; i < array.length; i++) {
 
-            if (i < halfway){
+            if (i < halfway) {
                 middleArifmetic1 += array[i];
-            }else{
+            } else {
                 middleArifmetic2 += array[i];
             }
         }
-        middleArifmetic1 = middleArifmetic1/halfway;
-        middleArifmetic2 = middleArifmetic2/halfway;
+        middleArifmetic1 = middleArifmetic1 / halfway;
+        middleArifmetic2 = middleArifmetic2 / halfway;
 
-        if (middleArifmetic1 > middleArifmetic2){
-            for (int i = 0; i < halfway ; i++) {
+        if (middleArifmetic1 > middleArifmetic2) {
+            for (int i = 0; i < halfway; i++) {
                 System.out.print(array[i] + " ");
             }
-            }else{
-                for (int i = halfway; i <array.length ; i++) {
-                    System.out.print(array[i] + " ");
-                }
+        } else {
+            for (int i = halfway; i < array.length; i++) {
+                System.out.print(array[i] + " ");
+            }
         }
 
 
