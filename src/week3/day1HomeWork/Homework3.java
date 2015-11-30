@@ -1,5 +1,10 @@
 package week3.day1HomeWork;
 
+import java.util.Scanner;
+
+import static utils.ArrayUtils.showArray;
+import static utils.StringUtils.wordsToUpperCase;
+
 /**
  * Created by SlavaKhonin on 11/30/2015.
  * Верхний регистр.
@@ -13,21 +18,15 @@ package week3.day1HomeWork;
  */
 public class Homework3 {
     public static void main(String[] args) {
-        System.out.println(toUpperCase("alala"));
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Please enter a sentence: ");
+        String sentence = sc.nextLine();
+        String[] words = sentence.split(" ");
+        wordsToUpperCase(words);
+        showArray(words);
 
     }
 
 
-
-    public static String toUpperCase(String word){
-        char [] letters = word.toCharArray();
-        letters[0] = Character.toUpperCase(letters[0]);
-
-        word = "";
-
-        for (int i = 0; i < letters.length; i++) {
-            word += letters[i];
-        }
-        return word;
-    }
 }
