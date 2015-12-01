@@ -85,4 +85,12 @@ public class StringUtils {
         return word;
     }
 
+    public static String stringArrayToString (String[] words){
+        String sentence = "";
+        for (int i = 0; i < words.length; i++) {
+            sentence += words[i] + " ";
+        }
+        return sentence;
+        }
+
 }
